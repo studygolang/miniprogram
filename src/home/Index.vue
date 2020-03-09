@@ -59,7 +59,6 @@ import Header from '../common/Header.vue'
 import Footer from '../common/Footer.vue'
 import Web from 'reduce-loader!../common/Web.vue'
 import 'reduce-loader!./web'
-
 export default Vue.extend({
   name: 'Home',
   components: {
@@ -67,7 +66,6 @@ export default Vue.extend({
     Footer,
     Web,
   },
-
   data() {
     return {
       interval: 2380,
@@ -107,14 +105,12 @@ export default Vue.extend({
       }]
     }
   },
-
   created() {
     window.addEventListener('wxload', query => console.log('page1 wxload', query))
     window.addEventListener('wxshow', () => console.log('page1 wxshow'))
     window.addEventListener('wxready', () => console.log('page1 wxready'))
     window.addEventListener('wxhide', () => console.log('page1 wxhide'))
     window.addEventListener('wxunload', () => console.log('page1 wxunload'))
-
     if (process.env.isMiniprogram) {
       console.log('I am in miniprogram')
       // For Dean Test Passport.
@@ -141,11 +137,9 @@ export default Vue.extend({
     onClickJump() {
       window.location.href = '/test/list/123'
     },
-
     onClickOpen() {
       window.open('/test/detail/123')
     },
-
     onClickShare() {
       console.log('I am in miniprogram')
     },
@@ -157,7 +151,6 @@ export default Vue.extend({
 .cnt {
   margin-top: 20px;
 }
-
 a, button {
   display: block;
   width: 100%;
@@ -167,13 +160,11 @@ a, button {
   font-size: 20px;
   border: 1px solid #ddd;
 }
-
 .miniprogram-root {
   .for-web {
     display: none;
   }
 }
-
     .swiper {
         margin-top: 15px;
         width: 100%;
@@ -185,5 +176,4 @@ a, button {
         height: 160px;
         border-radius: 20px;
     }
-
 </style>
