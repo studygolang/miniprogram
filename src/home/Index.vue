@@ -19,7 +19,37 @@
     <tabs></tabs>
     <wx-button open-type="share" @click="onClickShare">分享</wx-button>
 
-
+    <!-- 列表内容 -->
+    <div v-for="(item, index) in list" class="article_list">
+      <div class="article_list_item">
+        <div class="article_detail">
+          <div>
+            <div class="article_author">
+              <img :src="item.author.avatar" alt="">
+              {{item.author.nickname}}
+            </div>
+            <div class="article_title">
+              {{item.title}}
+            </div>
+            <div class="article_description">
+              {{item.description}}
+            </div>
+          </div>
+          <img :src="item.cover" alt="">
+        </div>
+        <div class="article_other">
+          <div class="acticle_goods">
+            {{item.goods}}
+          </div>
+          <div class="acticle_comments">
+            {{item.comments}}
+          </div>
+          <div class="acticle_share">
+            分享
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -50,6 +80,31 @@ export default Vue.extend({
         'https://wechat-1251018873.file.myqcloud.com/images/banner.png',
       ],
       bannerImg: 'https://wechat-1251018873.file.myqcloud.com/images/banner.png',
+      list: [{
+        id: 1,
+        author: {
+          id: 1,
+          nickname: '用户1',
+          avatar: 'https://avatars0.githubusercontent.com/u/44227678?s=88&v=4',
+        },
+        title: '测试文章1的标题',
+        description: '测试文章1的描述',
+        cover: 'https://wechat-1251018873.file.myqcloud.com/images/banner.png',
+        goods: 6,
+        comments: 6,
+      }, {
+        id: 2,
+        author: {
+          id: 2,
+          nickname: '用户2',
+          avatar: 'https://avatars2.githubusercontent.com/u/33213215?s=80&v=4',
+        },
+        title: '测试文章2的标题',
+        description: '测试文章2的描述',
+        cover: 'https://wechat-1251018873.file.myqcloud.com/images/banner.png',
+        goods: 16,
+        comments: 26,
+      }]
     }
   },
 
