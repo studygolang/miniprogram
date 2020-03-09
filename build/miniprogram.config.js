@@ -19,6 +19,9 @@ module.exports = {
             '/list/:id',
             '/detail/:id',
         ],
+        doc: [
+            '/doc/index',
+        ],
     },
     redirect: {
         notFound: 'home',
@@ -27,14 +30,19 @@ module.exports = {
     generate: {
         autoBuildNpm: 'npm',
   		tabBar: {
-			color: '#333',
-            selectedColor: '#EF4431',
+			color: '#7F8389',
+            selectedColor: '#59BF74',
             backgroundColor: '#ffffff',
             list: [{
                 pageName: 'home',
                 text: '主页',
 	            iconPath: './imgs/tabs/home.png',
                 selectedIconPath: './imgs/tabs/home_selected.png'
+            }, {
+                pageName: 'doc',
+                text: '文档',
+                iconPath: './imgs/tabs/doc.png',
+                selectedIconPath: './imgs/tabs/doc_selected.png'
             }, {
                 pageName: 'me',
                 text: '我的',
