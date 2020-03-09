@@ -20,7 +20,7 @@
     <wx-button open-type="share" @click="onClickShare">分享</wx-button>
 
     <!-- 列表内容 -->
-    <div v-for="(item, index) in list" class="article_list">
+    <div v-for="(item, index) in list" :key="index" class="article_list">
       <div class="article_list_item">
         <div class="article_detail">
           <div>
@@ -59,6 +59,7 @@ import Header from '../common/Header.vue'
 import Footer from '../common/Footer.vue'
 import Web from 'reduce-loader!../common/Web.vue'
 import 'reduce-loader!./web'
+
 export default Vue.extend({
   name: 'Home',
   components: {
