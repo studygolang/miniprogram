@@ -19,37 +19,9 @@
     <tabs></tabs>
     <wx-button open-type="share" @click="onClickShare">分享</wx-button>
 
-    <!-- 列表内容 -->
-    <div v-for="(item, index) in list" :key="index" class="article_list">
-      <div class="article_list_item">
-        <div class="article_detail">
-          <div>
-            <div class="article_author">
-              <img :src="item.author.avatar" alt="">
-              {{item.author.nickname}}
-            </div>
-            <div class="article_title">
-              {{item.title}}
-            </div>
-            <div class="article_description">
-              {{item.description}}
-            </div>
-          </div>
-          <img :src="item.cover" alt="">
-        </div>
-        <div class="article_other">
-          <div class="acticle_goods">
-            {{item.goods}}
-          </div>
-          <div class="acticle_comments">
-            {{item.comments}}
-          </div>
-          <div class="acticle_share">
-            分享
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- 引用列表内容组件 -->
+    <list-content :list="list"></list-content>
+    
   </div>
 </template>
 
@@ -59,6 +31,7 @@ import Header from '../common/Header.vue'
 import Footer from '../common/Footer.vue'
 import Web from 'reduce-loader!../common/Web.vue'
 import 'reduce-loader!./web'
+import ListContent from '../component/ListContent.vue'
 
 export default Vue.extend({
   name: 'Home',
@@ -66,6 +39,7 @@ export default Vue.extend({
     Header,
     Footer,
     Web,
+    ListContent
   },
   data() {
     return {
