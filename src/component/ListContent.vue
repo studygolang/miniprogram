@@ -29,7 +29,7 @@
           </div>
         </div>
       </div>
-    </div> 
+    </div>
   </div>
 </template>
 
@@ -42,7 +42,7 @@ export default Vue.extend({
     return {
     }
   },
-  props: ["list"],
+  props: ['list'],
 })
 
 </script>

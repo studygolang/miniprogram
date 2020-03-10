@@ -21,7 +21,6 @@
 
     <!-- 引用列表内容组件 -->
     <list-content :list="list"></list-content>
-    
   </div>
 </template>
 
