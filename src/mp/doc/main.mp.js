@@ -10,7 +10,7 @@ Vue.use(Router)
 const router = new Router({
   mode: 'history',
   routes: [{
-    path: '/doc/(home|index)',
+    path: '/(doc|index)?',
     name: 'Doc',
     component: Doc,
   }],
