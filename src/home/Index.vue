@@ -62,7 +62,7 @@ export default Vue.extend({
         title: '测试文章1的标题',
         description: '测试文章1的描述',
         cover: 'https://wechat-1251018873.file.myqcloud.com/images/banner.png',
-        goods: 6,
+        like: 6,
         comments: 6,
       }, {
         id: 2,
@@ -74,7 +74,7 @@ export default Vue.extend({
         title: '测试文章2的标题',
         description: '测试文章2的描述',
         cover: 'https://wechat-1251018873.file.myqcloud.com/images/banner.png',
-        goods: 16,
+        like: 16,
         comments: 26,
       }]
     }
