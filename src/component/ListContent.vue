@@ -4,7 +4,7 @@
     v-for="(item, index) in list"
     :key="index"
     class="article_list"
-    @click="jumpToDetail(item.id)">
+    @click="jumpToDetail('/article/' + item.id)">
       <div class="article_list_item">
         <div class="article_detail">
           <div>
@@ -47,8 +47,7 @@ export default Vue.extend({
     }
   },
   methods: {
-    jumpToDetail(id) {
-      const url = '/article/' + id
+    jumpToDetail(url) {
       window.location.href = url
     },
   },
