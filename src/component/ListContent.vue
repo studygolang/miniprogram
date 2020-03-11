@@ -1,6 +1,10 @@
 <template>
   <div class="listContent">
-    <div v-for="(item, index) in list" :key="index" class="article_list">
+    <div
+    v-for="(item, index) in list"
+    :key="index"
+    class="article_list"
+    @click="jumpToDetail('/article/' + item.id)">
       <div class="article_list_item">
         <div class="article_detail">
           <div>
@@ -18,8 +22,8 @@
           <img :src="item.cover" alt="">
         </div>
         <div class="article_other">
-          <div class="acticle_goods">
-            {{item.goods}}
+          <div class="like">
+            {{item.like}}
           </div>
           <div class="acticle_comments">
             {{item.comments}}
@@ -41,6 +45,11 @@ export default Vue.extend({
   data() {
     return {
     }
+  },
+  methods: {
+    jumpToDetail(url) {
+      window.location.href = url
+    },
   },
   props: ['list'],
 })

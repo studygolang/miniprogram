@@ -22,6 +22,9 @@ module.exports = {
         doc: [
             '/doc/index',
         ],
+        article: [
+            '/article/:id',
+        ],
     },
     redirect: {
         notFound: 'home',
