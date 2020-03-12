@@ -22,7 +22,7 @@
 
 <script>
 import Vue from 'vue'
-import Tabs from './Tabs/Index.vue'
+import Tabs from './tabs/Index.vue'
 import Web from 'reduce-loader!../common/Web.vue'
 import 'reduce-loader!./web'
 

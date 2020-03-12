@@ -7,8 +7,11 @@
         @click.stop="tabChang(item.key)"
         :class="item.key === activeKey?'item_active':'item'"
       >
-      {{item.label}} 
-      <img class='icon' v-if="item.icon || item.activeIcon" :src="item.key === activeKey?item.activeIcon:item.icon" style="height:30rpx;width:30rpx"/>
+      {{item.label}}
+      <img
+      class='icon' v-if="item.icon || item.activeIcon"
+      :src="item.key === activeKey?item.activeIcon:item.icon"
+      style="height:30rpx;width:30rpx"/>
       </KView>
     </KView>
     <kView class="content">
@@ -26,7 +29,7 @@ export default Vue.extend({
   data() {
     return {
       tabList: [
-        { label: '最新', key: 'newest' ,icon:'http://static.gocoder.top/unfold.png' ,activeIcon:'http://static.gocoder.top/unfold_active.png'},
+        { label: '最新', key: 'newest', icon: 'http://static.gocoder.top/unfold.png', activeIcon: 'http://static.gocoder.top/unfold_active.png' },
         { label: '专栏', key: 'column' },
         { label: '付费', key: 'pay' }
       ],
@@ -39,7 +42,7 @@ export default Vue.extend({
           },
           title: '什么是协程（goroutine），它们是怎样作的呢?,什么是协程（goroutine），它们是怎样作的呢?',
           description: '这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述',
-          like: true,
+          like: 6,
           comments: 10,
           id: 12,
           cover: ''
@@ -51,7 +54,7 @@ export default Vue.extend({
           },
           title: '什么是协程（goroutine），它们是怎样作的呢?什么是协程（goroutine），它们是怎样作的呢?什么是协程（goroutine），它们是怎样作的呢?',
           description: '这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述',
-          like: true,
+          like: 6,
           comments: 10,
           id: 13,
           cover: 'http://img1.3lian.com/gif/more/11/2012/03/d037a77443c0a72a1432d815cd3b5724.jpg'
@@ -65,7 +68,7 @@ export default Vue.extend({
   methods: {
     tabChang(activeKey) {
       this.activeKey = activeKey
-      this.$emit("onChange",activeKey)
+      this.$emit('onChange', activeKey)
     }
   }
 })

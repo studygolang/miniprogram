@@ -20,6 +20,7 @@
         <div class="article_other">
           <div class="like">
             <img class="img" src="http://static.gocoder.top/like.png" alt="" mode="widthFix">
+            {{item.like}}
           </div>
           <div class="acticle_comments">
             <img class="img" src="http://static.gocoder.top/comment.png" style="" alt="" mode="widthFix" >
@@ -134,7 +135,7 @@ word-break:break-all;
       .img{
           height: 28rpx;
           width: 30rpx;
-          margin-left: 10rpx;
+          margin-right: 10rpx;
         }
       .acticle_comments{
         .img{
