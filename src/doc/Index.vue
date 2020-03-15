@@ -1,5 +1,5 @@
 <template>
-    <view>
+    <view class="page_doc">
         <view class="doc_info">
             <view class="doc_item"
             v-for="(item,index) in docTitleList"
@@ -45,39 +45,43 @@ export default Vue.extend({
 
 </script>
 <style lang="less">
-    .doc_info{
-        width: 100%;
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        padding: 10px 20px 20px 20px;
+    .page_doc {
+
+        .doc_info{
+            width: 100%;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            padding: 10px 20px 20px 20px;
+        }
+
+        .doc_item{
+            width:100%;
+            height:160rpx;
+            background:rgba(255,255,255,1);
+            border-radius:4px;
+            line-height:160rpx;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .doc_item_title {
+            position: absolute;
+            left: 20px;
+            font-family: PingFangSC-Regular;
+            font-size: 34rpx;
+            color: #333333;
+            letter-spacing: 0;
+            line-height: 160rpx;
+            font-weight: 700;
+        }
+
+        .doc_item_icon_right{
+            position: absolute;
+            width: 12px;
+            height: 15px;
+            top: 35px;
+            right: 16px;
+        }
     }
 
-    .doc_item{
-        width:100%;
-        height:80px;
-        background:rgba(255,255,255,1);
-        border-radius:4px;
-        line-height:80px;
-        margin-bottom: 10px;
-        position: relative;
-    }
-
-    .doc_item_title {
-        position: absolute;
-        left: 20px;
-        font-family: PingFangSC-Regular;
-        font-size: 16px;
-        color: #333333;
-        letter-spacing: 0;
-        line-height: 80px;
-        font-weight: 400;
-    }
-
-    .doc_item_icon_right{
-        position: absolute;
-        width: 12px;
-        height: 15px;
-        top: 35px;
-        right: 16px;
-    }
 </style>
