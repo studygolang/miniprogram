@@ -23,6 +23,7 @@
 <script>
 import Vue from 'vue'
 import ListContent from '../../component/ListContent.vue'
+import { getArticles } from '../../api/commont'
 
 export default Vue.extend({
   name: 'Tabs',
@@ -70,6 +71,11 @@ export default Vue.extend({
       this.activeKey = activeKey
       this.$emit('onChange', activeKey)
     }
+  },
+  created() {
+    getArticles(1).then((res) => {
+      console.log(res)
+    })
   }
 })
 </script>
