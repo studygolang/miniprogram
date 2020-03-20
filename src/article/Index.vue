@@ -21,7 +21,7 @@ export default Vue.extend({
   name: 'Article',
   data() {
     return {
-      article:{
+      article: {
         author: {
           avatar: 'http://img1.3lian.com/gif/more/11/2012/03/d037a77443c0a72a1432d815cd3b5724.jpg',
           nickname: '昵称'
