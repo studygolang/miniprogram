@@ -3,8 +3,8 @@
  */
 
 module.exports = {
-    origin: 'https://mina.baobeihuijia.com',
-    entry: '/',
+    origin: 'https://studygolang.com/',
+    entry: '/app',
     router: {
         home: [
             '/(home|index)?',
