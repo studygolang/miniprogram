@@ -5,7 +5,6 @@
             {{ article.title }}
         </h1>
         <p class="desc">
-            <!-- {{ article.description }} -->
         </p>
     </header>
     <article class="content" v-html="article.content">
