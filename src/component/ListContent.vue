@@ -9,22 +9,22 @@
         <div class="article_detail" @click="jumpToDetail('/article/' + item.id)">
           <div class="artclie_text_msg">
             <div class="article_author">
-              <img class="img"  :src="item.author.avatar" mode='widthFix' alt="" />
-              <div class="nickname">{{item.author.nickname}}</div>
+              <!-- <img class="img"  :src="item.author.avatar" mode='widthFix' alt="" /> -->
+              <div class="nickname">{{item.author}}</div>
             </div>
             <div class="article_title">{{item.title}}</div>
-            <div class="article_description">{{item.description}}</div>
+            <!-- <div class="article_description">{{item.description}}</div> -->
           </div>
           <img class="img_cover" v-if="item.cover" :src="item.cover" alt mode='widthFix' />
         </div>
         <div class="article_other">
           <div class="like">
             <img class="img" src="http://static.gocoder.top/like.png" alt="" mode="widthFix">
-            {{item.like}}
+            {{item.likenum}}
           </div>
           <div class="acticle_comments">
             <img class="img" src="http://static.gocoder.top/comment.png" style="" alt="" mode="widthFix" >
-            {{item.comments}}
+            {{item.cmtnum}}
           </div>
           <div class="acticle_share">
             <wx-button open-type="share" style="background:#fff">
