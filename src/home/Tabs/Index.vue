@@ -35,32 +35,7 @@ export default Vue.extend({
         { label: '付费', key: 'pay' }
       ],
       activeKey: 'newest',
-      actclieList: [
-        {
-          author: {
-            avatar: 'http://img1.3lian.com/gif/more/11/2012/03/d037a77443c0a72a1432d815cd3b5724.jpg',
-            nickname: '昵称'
-          },
-          title: '什么是协程（goroutine），它们是怎样作的呢?,什么是协程（goroutine），它们是怎样作的呢?',
-          description: '这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述',
-          like: 6,
-          comments: 10,
-          id: 12,
-          cover: ''
-        },
-        {
-          author: {
-            avatar: 'http://img1.3lian.com/gif/more/11/2012/03/d037a77443c0a72a1432d815cd3b5724.jpg',
-            nickname: '昵称'
-          },
-          title: '什么是协程（goroutine），它们是怎样作的呢?什么是协程（goroutine），它们是怎样作的呢?什么是协程（goroutine），它们是怎样作的呢?',
-          description: '这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述',
-          like: 6,
-          comments: 10,
-          id: 13,
-          cover: 'http://img1.3lian.com/gif/more/11/2012/03/d037a77443c0a72a1432d815cd3b5724.jpg'
-        }
-      ]
+      actclieList: []
     }
   },
   components: {
@@ -74,7 +49,8 @@ export default Vue.extend({
   },
   created() {
     getArticles(1).then((res) => {
-      console.log(res)
+      // console.log(res)
+      this.actclieList = res.data.articles
     })
   }
 })
