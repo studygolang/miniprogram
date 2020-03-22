@@ -3,8 +3,8 @@
  */
 
 module.exports = {
-    origin: 'https://studygolang.com/',
-    entry: '/app',
+    origin: 'https://studygolang.com',
+    entry: '/',
     router: {
         home: [
             '/(home|index)?',
