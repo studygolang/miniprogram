@@ -60,9 +60,9 @@ module.exports = {
         navigationBarTitleText: 'Go 中文网',
         navigationBarTextStyle: 'black'
     },
-	appExtraConfig: {
+    appExtraConfig: {
         sitemapLocation: 'sitemap.json',
-	},
+    },
     global: {
         share: true,
         windowScroll: false,
@@ -87,6 +87,6 @@ module.exports = {
 	},
     projectConfig: {
         projectname: 'mina',
-        appid: 'wxf7b5556f34553852',
+        appid: 'wxba351784462a23bd',
     },
 }
