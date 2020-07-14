@@ -29,12 +29,35 @@ export default Vue.extend({
     this.articleId = this.$route.params.id
     // 组装URL
     this.url = this.url + this.articleId
+    // 开启分享
+    this.openShare(this.articleId)
+  },
+  methods: {
+    openShare(articleId) {
+      console.log(articleId)
+      wx.showShareMenu({
+        withShareTicket: true,
+        menus: ['shareAppMessage', 'shareTimeline'],
+      })
+      window.onShareAppMessage = (res) => {
+        console.log(res)
+        return {
+          path: `/article/${articleId}`,
+        }
+      }
+      window.onShareTimeline = (res) => {
+        console.log(res)
+        return {
+          path: `/article/${articleId}`,
+        }
+      }
+    }
   }
 })
 </script>
 <style lang="less">
 .page_article {
-     padding: 0 20px;
+    padding: 0 20px;
     .header {
         .title {
             color:#333;
