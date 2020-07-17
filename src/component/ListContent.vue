@@ -27,7 +27,7 @@
             {{item.cmtnum}}
           </div>
           <div class="acticle_share">
-            <wx-button open-type="share" style="background:#fff">
+            <wx-button open-type="share" @click="share(item)" style="background:#fff">
               <img class="img" src="http://static.gocoder.top/share.png" style="" alt="" mode="widthFix">
             </wx-button>
           </div>
@@ -45,9 +45,29 @@ export default Vue.extend({
   data() {
     return {}
   },
+  created() {
+    // window.addEventListener('wxshow', (options) => console.log('wxshow:', options))
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline'],
+    })
+  },
   methods: {
     jumpToDetail(url) {
       window.location.href = url
+    },
+    share(article) {
+      window.onShareAppMessage = (res) => {
+        console.log(res)
+        if (res.from === 'button') {
+          return {
+            title: article.title,
+            path: `/article/${article.id}`,
+            imageUrl: article.cover,
+          }
+        }
+        return null
+      }
     }
   },
   props: ['list']
