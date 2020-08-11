@@ -41,9 +41,9 @@ export default Vue.extend({
       circularFlag: true,
       duration: 1200,
       background: [
-        'https://wechat-1251018873.file.myqcloud.com/images/banner.png',
-        'https://wechat-1251018873.file.myqcloud.com/images/banner.png',
-        'https://wechat-1251018873.file.myqcloud.com/images/banner.png'
+	'https://static.studygolang.com/minprogram/banner/online.png',
+	'https://static.studygolang.com/minprogram/banner/online1.png',
+	'https://static.studygolang.com/minprogram/banner/online2.png'
       ],
       current: 1,
       navList: [
@@ -51,7 +51,7 @@ export default Vue.extend({
         { label: '专栏', key: 'column' },
         { label: '最新', key: 'pay' }
       ],
-      bannerImg: 'https://wechat-1251018873.file.myqcloud.com/images/banner.png',
+      bannerImg: 'https://static.studygolang.com/minprogram/banner/online.png',
     }
   },
   created() {
