@@ -9,7 +9,7 @@
     >
       <KSwiperItem v-for="(item,index) in background" :key="index">
         <KView :class="'swiper-item '+ item">
-          <img :src="bannerImg" class="banner-item" mode='widthFix'/>
+          <img :src="item" class="banner-item" mode='widthFix'/>
         </KView>
       </KSwiperItem>
     </KSwiper>
@@ -36,7 +36,7 @@ export default Vue.extend({
   data() {
     return {
       interval: 2380,
-      autoplay: false,
+      autoplay: true,
       indicatorDots: false,
       circularFlag: true,
       duration: 1200,
