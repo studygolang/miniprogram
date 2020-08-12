@@ -24,6 +24,7 @@
 import Vue from 'vue'
 import Tabs from './Tabs/Index.vue'
 import Web from 'reduce-loader!../common/Web.vue'
+import { mpAutoUpdate } from '../common/utils'
 import 'reduce-loader!./web'
 
 export default Vue.extend({
@@ -41,9 +42,9 @@ export default Vue.extend({
       circularFlag: true,
       duration: 1200,
       background: [
-	'https://static.studygolang.com/minprogram/banner/online.png',
-	'https://static.studygolang.com/minprogram/banner/online1.png',
-	'https://static.studygolang.com/minprogram/banner/online2.png'
+        'https://static.studygolang.com/minprogram/banner/online.png',
+        'https://static.studygolang.com/minprogram/banner/online1.png',
+        'https://static.studygolang.com/minprogram/banner/online2.png'
       ],
       current: 1,
       navList: [
@@ -65,6 +66,8 @@ export default Vue.extend({
 
     if (process.env.isMiniprogram) {
       console.log('I am in miniprogram')
+      // For Kevin Add Mp Auto Update.
+      mpAutoUpdate()
       // For Dean Test Passport.
       // Can delete if needed.
       wx.login({
