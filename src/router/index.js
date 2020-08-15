@@ -5,6 +5,7 @@ const Home = () => import(/* webpackChunkName: "Home" */'@/home/Index.vue')
 const List = () => import(/* webpackChunkName: "List" */'@/list/Index.vue')
 const Detail = () => import(/* webpackChunkName: "Detail" */'@/detail/Index.vue')
 const Doc = () => import(/* webpackChunkName: "Doc" */'@/doc/Index.vue')
+const DocDetail = () => import(/* webpackChunkName: "DocDetail" */'@/docDetail/Index.vue')
 const Article = () => import(/* webpackChunkName: "Article" */'@/article/Index.vue')
 Vue.use(Router)
 
@@ -35,6 +36,10 @@ export default new Router({
     name: 'Doc',
     component: Doc,
   }, {
+    path: '/doc/detail/:id',
+    name: 'DocDetail',
+    component: DocDetail,
+  },{
     path: '/article/:id',
     name: 'Article',
     component: Article,
