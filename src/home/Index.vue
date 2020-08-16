@@ -1,18 +1,20 @@
 <template>
   <div class="home">
-    <KSwiper
-      :indicator-dots="indicatorDots"
-      :circular="circularFlag"
-      :autoplay="autoplay"
-      :duration="duration"
-      :interval="interval"
-    >
-      <KSwiperItem v-for="(item,index) in background" :key="index">
-        <KView :class="'swiper-item '+ item">
-          <img :src="item" class="banner-item" mode='widthFix'/>
-        </KView>
-      </KSwiperItem>
-    </KSwiper>
+    <div class="swiper">
+      <KSwiper
+        :indicator-dots="indicatorDots"
+        :circular="circularFlag"
+        :autoplay="autoplay"
+        :duration="duration"
+        :interval="interval"
+      >
+        <KSwiperItem v-for="(item,index) in background" :key="index">
+          <KView :class="'swiper-item '+ item">
+            <img :src="item" class="banner-item" mode='widthFix'/>
+          </KView>
+        </KSwiperItem>
+      </KSwiper>
+    </div>
     <Tabs />
 
     <!-- <tabs></tabs>
@@ -119,14 +121,14 @@ export default Vue.extend({
   }
 }
     .swiper {
-        margin-top: 15px;
+        margin-top: 20rpx;
         width: 100%;
-        height: 185px;
+        height: 300rpx;
     }
     .banner-item {
         display: block;
         margin: auto;
-        height: 160px;
-        border-radius: 20px;
+        width: 95%;
+        border-radius: 20rpx;
     }
 </style>

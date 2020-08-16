@@ -22,6 +22,9 @@ module.exports = {
         doc: [
             '/doc/index',
         ],
+        docDetail: [
+            '/doc/detail/:id',
+        ],
         article: [
             '/article/:id',
         ],

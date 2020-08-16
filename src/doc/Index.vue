@@ -23,16 +23,16 @@ export default Vue.extend({
       narrowImg: 'https://wechat-1251018873.file.myqcloud.com/images/narrow.png',
       docTitleList: [{
         name: '英文文档',
-        url: '/home',
+        url: '/doc/detail/docs',
       }, {
         name: '中文文档',
-        url: '/me',
+        url: '/doc/detail/docscn',
       }, {
         name: '标准库中文文档',
-        url: '/',
+        url: '/doc/detail/pkgdoc',
       }, {
         name: 'Go指南',
-        url: '/',
+        url: '/doc/detail/tour',
       }],
     }
   },

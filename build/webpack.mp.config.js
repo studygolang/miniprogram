@@ -21,6 +21,7 @@ module.exports = {
     other: path.resolve(__dirname, '../src/mp/other/main.mp.js'),
     me: path.resolve(__dirname, '../src/mp/me/main.mp.js'),
     doc: path.resolve(__dirname, '../src/mp/doc/main.mp.js'),
+    docDetail: path.resolve(__dirname, '../src/mp/docDetail/main.mp.js'),
     article: path.resolve(__dirname, '../src/mp/article/main.mp.js'),
   },
   output: {
