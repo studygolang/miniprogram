@@ -76,7 +76,7 @@ export default Vue.extend({
         success(res) {
           if (res.code) {
             wx.request({
-              url: 'https://mina.baobeihuijia.com/apis/oauth/v1/wechat/login',
+              url: 'https://scf.baobeihuijia.com/release/oauth/v1/wechat/login',
               data: {
                 code: res.code
               }
