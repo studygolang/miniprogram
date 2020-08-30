@@ -54,7 +54,6 @@ export default Vue.extend({
         { label: '专栏', key: 'column' },
         { label: '最新', key: 'pay' }
       ],
-      bannerImg: 'https://static.studygolang.com/minprogram/banner/online.png',
     }
   },
   created() {
@@ -76,7 +75,7 @@ export default Vue.extend({
         success(res) {
           if (res.code) {
             wx.request({
-              url: 'https://scf.baobeihuijia.com/release/oauth/v1/wechat/login',
+              url: 'https://mina.baobeihuijia.com/apis/oauth/v1/wechat/login',
               data: {
                 code: res.code
               }
